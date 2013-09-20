@@ -209,6 +209,20 @@ class File extends \SplFileInfo
 
         return $this->mimetype;
     }
+    
+    /**
+     * Get image dimensions
+     * @return array formatted array of dimensions
+     */
+    public function getDimensions()
+    {
+        list($width, $height) = getimagesize($this->getPathname());
+        return array(
+            'width' => $width,
+            'height' => $height
+        );
+    }
+    
 
     /********************************************************************************
     * Validate
