@@ -22,7 +22,7 @@ class DimensionTest extends PHPUnit_Framework_TestCase
         // Reset $_FILES superglobal
         $_FILES['foo'] = array(
             'name' => 'foo.txt',
-            'tmp_name' => $this->assetsDirectory . '/foo.txt',
+            'tmp_name' => $this->assetsDirectory . '/foo.jpg',
             'error' => 0
         );
     }
